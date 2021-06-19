@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<script>
+    let MyDate = function(day, month, year) {
+
+        this.day = day;
+
+        this.month = month;
+
+        this.year = year;
+        this.getDay = function () {
+            return this.day;
+        }
+        this.getMonth = function () {
+            return this.month;
+        }
+        this.getYear = function () {
+            return this.year;
+        }
+        this.setDay = function (day) {
+           return   this.day = day;
+        }
+        this.setMonth = function (month) {
+          return    this.month = month;
+        }
+        this.setYear = function (year) {
+          return    this.year = year;
+        };
+        this.setDate = function (day,month,year){
+            this.day= day;
+            this.month= month;
+            this.year= year;
+            return this.day+ "/" +this.month +  "/" + this.year
+
+        }
+        this.toString= function (day,month,year){
+            this.day= day;
+            this.month= month;
+            this.year= year;
+            return `${this.day}/${this.month}/${this.year}`
+        }
+    }
+    let date = new MyDate(2, 2, 2007);
+    let day = date.getDay(); // 2
+
+    let month = date.getMonth(); // 2
+
+    let year = date.getYear(); // 2007
+    alert(day + "/" + month + "/" + year);
+   day1 =  date.setDay(10);
+   month1=  date.setMonth(10);
+  year1 =   date.setYear(2019);
+
+
+    alert(day1 + "/" + month1 + "/" + year1);
+    a= date.setDate(20,9,1998)
+    alert(a)
+    b= date.toString(17,3,1998)
+    alert(b)
+</script>
+
+</body>
+</html>
